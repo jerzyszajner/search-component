@@ -3,7 +3,6 @@
     src: url(../assets/fonts/Lato-Regular.ttf);
 }
 
-
 body {
     width: 100%;
     min-height: 100vh;
@@ -58,7 +57,7 @@ main {
 .card__flag-container {
     display: block;
     text-align: center;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-x-large);
 }
 
 .card__description-container {
