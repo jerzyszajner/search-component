@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => renderCountries(countries));
 /* -------------------------------- */
 
 function renderCountries(countriesArray) {
+  countriesContainer.textContent = "";
   countriesArray.forEach((country) => {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -167,3 +168,13 @@ function renderCountries(countriesArray) {
     }`;
   });
 }
+
+searchInput.addEventListener("input", (e) => {
+  let filteredCountries = [...countries];
+  filteredCountries = filteredCountries.filter((country) => {
+    return country.name.toLowerCase().startsWith(e.target.value.toLowerCase());
+  });
+  console.log(filteredCountries);
+
+  renderCountries(filteredCountries);
+});
